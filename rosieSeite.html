@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Margarine&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap" rel="stylesheet">
+
+<title>Rosie Seite</title>
+</head>
+
+<style>
+
+
+    input[type=button] {
+        border-style: solid;
+        border-width: 2.5px;
+        border-color: #7f262659;
+        border-radius: 8px;
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .contact-button {
+        background-color:#ebd9d98c;
+        border-style: solid; 
+        border-width: 2.5px; 
+        border-color: #7f262659; 
+        border-radius: 8px;
+        font-size: 20px;
+        padding: 7px;
+    }
+
+    .flex-container {
+        display: flex;
+        justify-content:space-between;
+    }
+
+    .flex-item {
+        margin: 10px;
+    }
+
+    .kontakt {
+        display: flex;
+        justify-content: center;
+    }
+
+    .kontakt-item {
+        font-family: 'Arial';
+        font-size: 17px;
+    }
+
+
+    .absenden-button {
+        border-radius: 8px;
+        outline: none;
+        border-width: 2px; 
+        border-radius: 5px;
+        background-color:#f39cb1ab;
+        border-color: #7f262659;
+        font-family: 'Arial';
+        font-size: 17px;
+        transition: 0.5s ease all;
+    }
+
+    .absenden-button:hover {  
+        background-color: #e1e1e5d9;
+        color: black;
+        border: 2px solid #f39cb1ab;
+    }
+
+    .absenden-button:active {
+        background-color: #5f203fd9;
+        color: black;
+        border: 2px solid #f39cb1ab;
+    } 
+
+    a:link {
+    color: green;
+
+    }
+
+    /* visited link */
+    a:visited {
+    color: black;
+    }
+
+    /* mouse over link */
+    a:hover {
+    color: #3f51b5;
+    }
+
+    /* selected link */
+    a:active {
+    color: yellow;
+    } 
+
+    w:visited {
+    color: black;
+    }
+
+    w:hover {
+    color: #3f51b5;
+    }
+
+    w:active {
+    color: red;
+    } 
+
+
+    img:hover {
+        border-width: 2px;
+        border-style:solid; 
+        border-radius:16px;
+        border-color:#f39cb1ab;
+        background-color:#f39cb1ab;
+    }
+
+
+    #ich {
+        pointer-events: none;
+    }
+
+    abc {
+    background-color: #f39cb1ab;
+    padding: 20px;
+    display: none;
+    }
+    
+    sp:hover + abc {
+    display: block;
+    }
+
+
+    .tooltip {
+    position: relative;
+    display: inline-block;
+    }
+
+    .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #e1003d;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    }
+
+    .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #000000 transparent transparent transparent;
+    }
+
+    .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    }
+
+
+
+    .image-hover {
+    width: 380px;
+    height:400px;
+    background-image: url('https://i.pinimg.com/736x/3d/a0/5d/3da05d7c0bd68b3cfccd17ee1353b3d7.jpg'); /* Initial background image */
+    border-radius:16px;
+    background-size:cover;
+    }
+
+    .image-hover:hover {
+    background-image: url('https://www.kostuempalast.de/out/pictures/generated/product/2/659_892_100/110-820947_pic2.jpg'); /* Change on hover */
+    }
+
+
+    .btn {
+        background-color: #ffe9e982;
+        border: solid;
+        border-color: #5f203fd9;
+        color: #5f203fd9;
+        padding: 15px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+
+    .btn:hover {
+    background-color: #5f20403a;;
+    color: white;
+    }
+
+
+
+        .navbar {
+        overflow: hidden;
+        background-color: #d9658200;
+        font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+
+        .dropdown {
+        float: left;
+        overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+        font-size: 16px;  
+        border: none;
+        outline: none;
+        color: rgb(255, 255, 255);
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+        }
+
+        .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: #f39cb1ab;
+        }
+
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f39cb1ab;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        }
+
+        .dropdown-content a {
+        float: none;
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        }
+
+        .dropdown-content a:hover {
+        background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+        display: block;
+        }
+
+
+        body {
+          animation: 18s linear infinite rainbow;
+        }
+
+        @keyframes rainbow {
+            0% {
+                background-color: red;
+            }
+            16.666% {
+                background-color: orange;
+            }
+            33.333% {
+                background-color: yellow;
+            }
+            50% {
+                background-color: green;
+            }
+            66.666% {
+                background-color: blue;
+            }
+            83.333% {
+                background-color: indigo;
+            }
+            100% {
+                background-color: violet;
+            }
+        }
+        
+
+  </style>
+<body >
+
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="#news">News</a>
+        <div class="dropdown">
+          <button class="dropbtn">More 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div> 
+      </div>
+
+    <div style="text-align: center;">
+        <h1 style="font-size:50px;color:&#10048;; font-family: 'Comic Sans MS';"><sp>Hola, ich bin Rosie !</sp><abc style="font-size: 20px;font-family: 'Arial';">aka die weltbeste Programmiererin</abc></h1>
+    </div>
+
+    <div style="text-align: center; font-size:23px; font-family: 'Playwrite IN'; margin-top: -30px; color: #b54141;">
+        <p>Webdesign is my passion&#10083;</p>
+    </div>
+    <div style="font-size: 20px; font-family: 'Comic Sans MS'; text-align: center; margin-top: -20px;" onclick="Name=prompt('Wie heißt du?', name); alert(`Cooler Name, ${Name}!`); "><w><u>Und wer bist du?</u></w></div>
+
+
+            <div class="flex-container">
+                <div class="flex-item">
+                    <div class="flex-item">
+                            <button class="contact-button" type="submit">
+                                &#9742
+                                <div class="tooltip">+49 1631728999<span class="tooltiptext">Bitte nicht anrufen</span></div>
+                    </div>
+                    <div class="flex-item">
+                        <button class="contact-button" type="submit">
+                            &#9993
+                            rosalie.gardner@st.oth-regensburg.de
+                        </button>
+                    </div>
+                    <div class="flex-item">
+                        <button class="contact-button" type="submit">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" style="width:20px;height:20px;margin-bottom: -3px">
+                            rbsie
+                        </button>
+                    </div>
+                    <div class="flex-item">
+                        <ul>
+                         <li style="margin-top: 50px;margin-left:-20px;font-size:18px;font-family: 'Arial';"><a href="/">Rosie Search</a></li>
+                         <li style="margin-left:-20px;font-size:18px;font-family: 'Arial';"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Wichtiges</a></li>
+                        </ul> 
+                    </div>
+
+
+
+                </div>
+                <div class="flex-item">
+                    <div class="flex-item">
+                        <div style="text-align: right; font-size:20px; font-family: 'Arial';margin-left: 400px;margin-top: 50px;">
+                            <p>Das bin ich (oder so ähnlich)</p>
+                        </div>
+                    </div>
+                    <div class="flex-item">
+                        <div style="text-align: right; font-size:150px; font-family: 'Arial';margin-left: 350px;margin-top: -180px;">
+                            <p>&#10154;</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-hover">
+                </div>
+
+            </div>
+
+
+
+
+      <div style="text-align: justify; font-size:20px; font-family: 'Arial'; margin-bottom: 55px;margin-inline-end: 400px;margin-top: -100px;">
+        <p>Hallo du!&#9829; Ich bin Rosie und studiere Mathematik an der OTH Regensburg. 
+            Ich darf bei Optitool mein Praktikum absolvieren und habe deshalb diese coole Website erstellt. 
+            Hier erfahrt ihr mehr über mich.</p>
+
+            <p> <b>Dinge, die ich mag:</b></p>
+        </div>
+
+
+        <div style="display: flex; justify-content: space-between;padding-bottom: 50px;">
+            <div>
+                <h2 style="text-align: center; font-family: 'Arial';">Hundis</h2>
+
+                <img style="border-style:solid; border-color: #f39cb1ab; border-radius:16px;width:300px;height:200px;" src="https://www.josera.de/media/wysiwyg/ratgeber-de/ratgeber-hund/rassen/deutscher-schaeferhund/Hund_deutscherSchaeferhund_shutterstock_1180076233_Beitragsbild_Kopie.jpg" alt="Schäferhund">
+                </div>
+
+                <div>
+                <h2 style="text-align: center;font-family: 'Arial';" onclick="alert('Swiftie 4Life!!')"> Taylor Swift</h2>
+                <img style="border-style:solid; border-color: #f39cb1ab; border-radius:16px;width:200px;height:350px;" src="https://papers.co/wallpaper/papers.co-ha98-wallpaper-taylor-swift-love-concert-music-girl-face-33-iphone6-wallpaper.jpg
+                    " alt="Taylor Swift">
+                </div>
+
+            <div>
+                <h2 style="text-align: center;font-family: 'Arial';">  Mathematik </h2>
+                <img style="border-style:solid; border-color: #f39cb1ab; border-radius:16px;width:300px;height:300px;" src="https://www.fh-studiengang.de/images/mathematik_640.jpg" alt="Mathematik">
+            </div>
+
+
+            <div>
+                <h2 style="text-align: center;font-family: 'Arial';">  Sushi </h2>
+                <img style="border-style:solid; border-color: #f39cb1ab; border-radius:16px;width:300px;height:200px;" src="https://api.c2k2y3nvy0-heuschena1-p1-public.model-t.cc.commerce.ondemand.com/medias/625Wx625H-recipe-40.jpg?context=bWFzdGVyfHJvb3R8NDY5NTJ8aW1hZ2UvanBlZ3xhRGt3TDJnME15ODRPRGd4TlRVM056WTJNVGMwTHpZeU5WZDROakkxU0Y5eVpXTnBjR1V0TkRBdWFuQm58ZmY0ZDE3ZDhkNjY0NzE3NzE0MDk3ZWNlNmRhMThmYTNlZmE3NTBjOTg3ZGI2ZmJhMDllMzBlODE4NzIxMjYxZA" alt="Mathematik">
+            </div>
+
+            
+        </div>
+
+
+        <div class="flex-container" style="justify-content: flex-start;">
+            <div class="flex-item" style="width: 300px;;border-color: black; padding-left: 20px; border-width: 3px; border-style: solid; border-radius: 12px;">
+                <p style="font-family: 'Arial'; font-size: 20px;"><b>Lust auf ein Quiz?</b> </p><p style="font-family: 'Arial'; font-size: 17px;">Klicke auf die Fragen und teste dein Wissen.</p>
+                <p style="font-family: 'Arial'; font-size: 17px;" onclick="a = prompt('Wie heißt die Schauspielerin auf dem Bild ganz oben?');if (a == 'Jennifer Lawrence') alert('Richtig!');else alert( 'Das ist leider falsch! Die richtige Anwort lautet: Jennifer Lawrence' );">Frage 1</p>
+                <p style="font-family: 'Arial'; font-size: 17px;" onclick="b = prompt('Was ist die Ableitung von 5x²?');if (b == '10x') alert('Richtig!');else alert( 'Das ist leider falsch! Die richtige Anwort lautet: 10x');">Frage 2</p>    
+            </div>
+            <div class="flex-item">
+                <button onclick="ladeHunde()" style="border-radius: 8px; outline: none;border-width: 2px; border-radius: 5px;background-color:#f39cb054;border-color: #7f262659;font-family: 'Arial';font-size: 17px;transition: 0.5s ease all;">Klicke für Hundebild :D</button>
+            </div>
+
+            <div id="hund" class="flex-item">
+                    <img id="quelle" scr="" style="height: 200px;"/>
+            </div>
+
+        </div>
+
+
+    <script type="text/javascript"> 
+
+        function ladeHunde() {
+            fetch( 'https://dog.ceo/api/breeds/image/random')
+            .then(response => response.json())
+            .then(dog => {
+                /*const image = document.createElement('img');
+                image.src = dog.message;*/
+                document.getElementById("quelle").src=dog.message;
+            })
+        }
+
+    </script>
+
+
+
+
+
+        <div style="text-align: center; font-size:20px; font-family: 'Arial'; margin-top: 60px;">
+            <p>Soll ich eine Website für dich erstellen? Dann schreib mir gerne!</p>
+        </div>
+
+
+
+        <div class="kontakt">
+
+            <form id="form" action="#form">
+                <label class="kontakt-item" for="fname">Name:</label><br>
+                <input style="padding:5px;font-size: 15px;border-radius: 8px;outline: none;border-color: #7f262659;background-color:#ebd9d98c;" type="text" id="fname" size="30" name="fname"><br>
+                <label class="kontakt-item" for="lname">Email:</label><br>
+                <input style="padding:5px;font-size: 15px;border-radius: 8px;outline: none;border-color: #7f262659;background-color:#ebd9d98c;" type="text" id="lname" size="30" name="lname"><br>
+                <label class="kontakt-item" for="fname">Deine Nachricht:</label><br>
+                <textarea style="padding:5px;font-size: 15px;border-radius: 8px;border-width:2px;outline: none;border-color: #7f262659;background-color:#ebd9d98c;" id="nachricht" name="nachricht" rows="7" cols="50"></textarea><br>
+                <p id="hiddenText" style="display:none; font-size: 20px; font-family: 'Arial';">Jo <span id="anzeigename"></span>, danke für deine Nachricht!</p>
+                <input class="absenden-button"type="submit" value="Absenden" onclick="document.getElementById('anzeigename').innerText=document.getElementById('fname').value; document.getElementById('hiddenText').style.display='block'">
+            </form> 
+
+        </div>
+
+      <footer>
+        <div style="margin-top: 100px; text-align: center;">
+        Copyright &copy; 2024 Rosalie Gardner
+    </div>
+    </footer>
+
+
+</body>
+</html> 
